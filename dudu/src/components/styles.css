@@ -1,0 +1,11 @@
+table, th, td{
+    border:none;
+    width: 1000px;
+    line-height: 40px;
+    
+}
+th{
+    background-color: rgb(233, 233, 233);
+    text-align: left;
+    
+}
