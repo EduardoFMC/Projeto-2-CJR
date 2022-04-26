@@ -104,6 +104,60 @@ main {
     flex-direction: column;
     align-items: center;
 }
+/*
+table {
+    border-spacing: 0px;
+}
+
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    background-color: var(--table-head-bg);
+}
+
+tbody {
+    vertical-align: top;
+}
+
+th, td {
+    text-align: left;
+    width: 20rem;
+}
+
+th {
+    padding: 1rem;  
+}
+
+td {
+    padding: 0.6rem 1rem;
+}
+
+table{
+    align-items: center;
+
+}
+
+table, th, td{
+    border:none;
+    width: 1000px;
+    line-height: 40px;
+    align-items: center;
+    
+}
+th{
+    background-color: rgb(233, 233, 233);
+    text-align: left;
+    
+}
+/* sçdklasldkas~ldkas~ldkas~çklda */
+
+.tabelad {
+    width: 640px; /* Can be in percentage also. */
+    height: auto;
+    margin: 0 auto;
+    padding: 10px;
+    position: relative;
+}
 
 table {
     border-spacing: 0px;

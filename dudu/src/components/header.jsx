@@ -12,11 +12,15 @@ export default function Header () {
                 <a href="#">Perfil</a>
                 <a href="#">Sair</a>
             </nav>
+
         </div>
+        
         <div>
             <h1>Backoffice</h1>
             <p>Gerencie pedidos, refeições e mais.</p>
         </div>
+        
+        
     </header>
     );
     return (
