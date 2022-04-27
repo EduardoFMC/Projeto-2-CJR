@@ -1,6 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-// nao esta usando nenhum dos dois import
 
 export default function Header () {
     const element = (
