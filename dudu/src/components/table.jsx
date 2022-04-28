@@ -14,19 +14,12 @@ let users = [
     {id:11,first_name:"Fer",last_name:"Piddle",email:"ferspiddle9@nationalgeographic.com",created_at:"20/10/2022"},
 ]
 
-
-
-
 export default function Tabela(){
     const firstPage = users.slice(0, 5);
     const secondPage = users.slice(5, 10);
     const thirdPage = users[10];
     const [buttonPage, setButtonPage] = useState(1);
     let page = buttonPage;
-
-    
-
-    // const [buttonPage, setButtonPage] = useState(1);
 
     function mapUsers(arr) {
         return (
@@ -35,8 +28,11 @@ export default function Tabela(){
             <td>{item.name} {item.last_name}</td>
             <td>{item.email}</td>
             <td>{item.created_at}</td>
-            <td><button className='edit-button'>editar</button></td>
-            <td><button className='delete-button' onClick={() => {eraseUser(item.id)}}>excluir</button></td>
+            <td className='action-buttons'>
+                <button className='edit-button'>editar</button>
+                <button className='delete-button' onClick={() => {eraseUser(item.id, arr)}}>excluir</button>
+            </td>
+            
         </tr>)
         )
     }
@@ -44,48 +40,44 @@ export default function Tabela(){
     function eraseUser(id){
         users = users.filter(user => user.id !== id)
         document.getElementById(`${id}`).remove()
-        // setPagination(page)
     }
+    
     return (
-
-        <div className="tabelad">
-            <table>
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Cadastrado em</th>
-                        <th></th> 
-                        
-                    </tr>
-                </thead>
-                <tbody>
-                    {buttonPage === 1 ? (
-                        mapUsers(firstPage)
-                        ): buttonPage === 2 ? (
-                        mapUsers(secondPage)
-                        ) : buttonPage && 3 ? (
-                                <tr id={thirdPage.id} key={thirdPage.id}>
-                                    <td>{thirdPage.name} {thirdPage.last_name}</td>
-                                    <td>{thirdPage.email}</td>
-                                    <td>{thirdPage.created_at}</td>
-                                    <td><button className='edit-button'>editar</button></td>
-                                    <td><button className='delete-button' onClick={() => {eraseUser(thirdPage.id)}}>excluir</button></td>
-                                </tr>)
-                         : <></>}
+            <div className='main'>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Email</th>
+                            <th>Cadastrado em</th>
+                            <th></th> 
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {buttonPage === 1 ? (
+                                mapUsers(firstPage)
+                                ): buttonPage === 2 ? (
+                                mapUsers(secondPage)
+                                ) : buttonPage && 3 ? (
+                                    <tr id={thirdPage.id} key={thirdPage.id}>
+                                        <td>{thirdPage.name} {thirdPage.last_name}</td>
+                                        <td>{thirdPage.email}</td>
+                                        <td>{thirdPage.created_at}</td>
+                                        <td className='action-buttons'>
+                                            <button className='edit-button'>editar</button>
+                                            <button className='delete-button' onClick={() => {eraseUser(thirdPage.id, thirdPage)}}>excluir</button>
+                                        </td>
+                                    </tr>)
+                            : <></>} 
+                        </tbody>
+                    </table>
                     <div className='pagination-selectors'>
-                        {page === 3 ? <button onClick={() => {setButtonPage(page += 1)}} disabled> {'>>>'} </button> : <button onClick={() => {setButtonPage(page += 1)}}> {'>>>'} </button>}
-                        <button onClick={() => {setButtonPage(1)}}> 1 </button>
-                        <button onClick={() => {setButtonPage(2)}}> 2 </button>
-                        <button onClick={() => {setButtonPage(3)}}> 3 </button>
-                        {page === 1 ? <button onClick={() => {setButtonPage(page -=1 )}} disabled> {'<<<'} </button> : <button onClick={() => {setButtonPage(page-=1)}}> {'<<<'} </button>}
+                            {page === 1 ? <button onClick={() => {setButtonPage(page -= 1)}} disabled> {'<<<'} </button> : <button onClick={() => {setButtonPage(page -= 1)}}> {'<<<'} </button>}
+                            <button onClick={() => {setButtonPage(page=1)}}> 1 </button>
+                            <button onClick={() => {setButtonPage(page=2)}}> 2 </button>
+                            <button onClick={() => {setButtonPage(page=3)}}> 3 </button>
+                            {page === 3 ? <button onClick={() => {setButtonPage(page +=1 )}} disabled> {'>>>'} </button> : <button onClick={() => {setButtonPage(page +=1)}}> {'>>>'} </button>}
                     </div>
-                     
-                </tbody>
-            </table>
-            
-        </div>
-    );
+                </div> 
+            );
 }
-
-

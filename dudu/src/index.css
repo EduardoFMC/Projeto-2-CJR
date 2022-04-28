@@ -96,7 +96,7 @@ body {
 }
 
 /* implementation of style from main */
-main {
+.main {
     min-height: 40vh;
     width: 80%;
     margin: 2rem auto;
@@ -104,92 +104,32 @@ main {
     flex-direction: column;
     align-items: center;
 }
-/*
+
 table {
-    border-spacing: 0px;
+    border-spacing: 0;
 }
-
+  
 thead {
-    display: table-header-group;
-    vertical-align: middle;
     background-color: var(--table-head-bg);
+    vertical-align: middle;
 }
-
+  
 tbody {
     vertical-align: top;
 }
-
+  
 th, td {
     text-align: left;
     width: 20rem;
 }
-
+  
 th {
-    padding: 1rem;  
+    padding: 1rem;
 }
-
+  
 td {
     padding: 0.6rem 1rem;
 }
-
-table{
-    align-items: center;
-
-}
-
-table, th, td{
-    border:none;
-    width: 1000px;
-    line-height: 40px;
-    align-items: center;
-    
-}
-th{
-    background-color: rgb(233, 233, 233);
-    text-align: left;
-    
-}
-/* sçdklasldkas~ldkas~ldkas~çklda */
-
-.tabelad {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    width: 640px;
-    height: auto;
-    margin: 0 auto;
-    padding: 10px;
-    position: relative;
-    border-spacing: 0px;
-}
-
-/* table {
-    border-spacing: 0px;
-}
-
-thead {
-    display: table-header-group;
-    vertical-align: middle;
-    background-color: var(--table-head-bg);
-} */
-
-/* tbody {
-    vertical-align: top;
-}
-
-th, td {
-    text-align: left;
-    width: 20rem;
-}
-
-th {
-    padding: 1rem;  
-}
-
-td {
-    padding: 0.6rem 1rem;
-} */
 
 /* styles of actions-buttons */
 .action-buttons {
@@ -212,20 +152,25 @@ td {
   
 .edit-button {
     color: var(--edit-button-color);
+    background-color: white;
 }
   
 .delete-button {
     color: var(--delete-button-color);
+    background-color: white;
 }
   
 .edit-button:hover, .delete-button:hover {
-    color: var(--button-hover-color);
+    color: black;
 }
 
 /* paginations styles */
 .pagination-selectors {
     display: flex;
     margin: 1rem auto;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
 }
   
 .pagination-selectors button {
@@ -263,28 +208,3 @@ footer {
     justify-content: space-between;
     padding: 0 4rem;
   }
-
-/* responsivity (i try) */
-@media (max-width: 480px) {
-    main, header{
-        object-fit: cover;
-    }
-
-    header {
-        padding: 0px;
-    }
-
-    .options {
-        justify-content: center;
-    }
-
-    footer {
-        background-color: var(--footer-color);
-        min-height: 2rem;
-        display: flex;
-        align-items: center; 
-        justify-content: space-between;
-        padding: 0 4rem;
-        position: relative;
-      }
-}
