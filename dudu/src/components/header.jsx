@@ -3,7 +3,7 @@ import React from 'react';
 export default function Header () {
     const element = (
         <header>
-        <div class="options">
+        <div className="options">
             <h3>dinnerdash</h3>
             <nav>
                 <a href="#">Backoffice</a>

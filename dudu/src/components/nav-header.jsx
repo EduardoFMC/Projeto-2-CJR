@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function NavFirst () {
     const elementNav = (
-        <nav class="options-backoffice">
+        <nav className="options-backoffice">
             <a href="#">Pedidos</a>
             <a href="#">Usuários</a>
             <a href="#">Refeições</a>

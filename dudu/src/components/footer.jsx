@@ -5,8 +5,8 @@ export default function Footer(){
     return (
         <div>
             <footer>
-                <span class="copyright">dinnerdash | todos os direitos reservados</span>
-                <span class="developer_info">desenvolvido por Trainee Legal</span>
+                <span className="copyright">dinnerdash | todos os direitos reservados</span>
+                <span className="developer_info">desenvolvido por Felps e Eduardo</span>
             </footer>
         </div>
     );

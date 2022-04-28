@@ -152,14 +152,19 @@ th{
 /* sçdklasldkas~ldkas~ldkas~çklda */
 
 .tabelad {
-    width: 640px; /* Can be in percentage also. */
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    width: 640px;
     height: auto;
     margin: 0 auto;
     padding: 10px;
     position: relative;
+    border-spacing: 0px;
 }
 
-table {
+/* table {
     border-spacing: 0px;
 }
 
@@ -167,9 +172,9 @@ thead {
     display: table-header-group;
     vertical-align: middle;
     background-color: var(--table-head-bg);
-}
+} */
 
-tbody {
+/* tbody {
     vertical-align: top;
 }
 
@@ -184,7 +189,7 @@ th {
 
 td {
     padding: 0.6rem 1rem;
-}
+} */
 
 /* styles of actions-buttons */
 .action-buttons {
